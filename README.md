@@ -16,5 +16,7 @@ Then open http://127.0.0.1:8000/health
 Next:
 
 - Identify a card from a photo
+![alt text](image-1.png)
+
 - Look up prices from legitimate APIs
 - Measure identification accuracy on photos of my own cards
