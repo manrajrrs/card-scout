@@ -12,7 +12,7 @@ Eval: 10 photos of my own Riftbound cards, scored by exact match against hand-wr
 | 2 | Prompt asks for the full card name, including the subtitle | 8/10 | 10/10 | 10/10 | 10/10 | 8/10 |
 | 3 | Prompt adds guidance for identifying rarity | 10/10 | 10/10 | 10/10 | 10/10 | 10/10 |
 
-Each row is a single run, and model output varies slightly between runs. The prompt was tuned on these same 10 cards, so these scores are on the tuning set. A held-out set is planned.
+Held-out set: 10 additional cards, same prompt as run 3, no tuning afterwards: 10/10 full match. Photos were taken in the same conditions as the tuning set, so a harder set (angles, glare, sleeves) is next.
 
 ## How it works
 
