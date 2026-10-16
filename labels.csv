@@ -1,21 +1,31 @@
-filename,name,set_code,number,rarity
-card1.jpg,"Teemo, Strategist",SFD,230/221,Overnumbered
-card2.jpg,"Kai'Sa, Survivor",VEN,SP1/006,Special
-card3.jpg,The Boss,OGN,310/298,Overnumbered
-card4.jpg,Blind Monk,OGN,304/298,Overnumbered
-card5.jpg,Daughter of the Void,OGN,299/298,Overnumbered
-card6.jpg,"Fizz, Trickster",SFD,140/221,Rare
-card7.jpg,"Azir, Ascendant",SFD,050/221,Rare
-card8.jpg,"Rengar, Pouncing",SFD,025/221,Rare
-card9.jpg,"Ezreal, Dashing",SFD,082/221,Rare
-card10.jpg,"Yone, Blademaster",SFD,116/221,Rare
-card11.jpg,"Rek'Sai, Swarm Queen",SFD,170/221,Rare
-card12.jpg,"Soraka, Wanderer",SFD,173/221,Rare
-card13.jpg,"Bard, Mercurial",SFD,079/221,Rare
-card14.jpg,"Fiora, Peerless",SFD,110/221,Rare
-card15.jpg,"Aphelios, Exalted",SFD,049/221,Rare
-card16.jpg,"Lucian, Merciless",SFD,113/221,Rare
-card17.jpg,"Janna, Savior",SFD,053/221,Rare
-card18.jpg,"Ornn, Forge God",SFD,085/221,Rare
-card19.jpg,"Rumble, Hotheaded",SFD,026/221,Rare
-card20.jpg,"Rell, Magnetic",SFD,024/221,Rare
+filename,name,set_code,number,rarity,group
+card1.jpg,"Teemo, Strategist",SFD,230/221,Overnumbered,tuning
+card2.jpg,"Kai'Sa, Survivor",VEN,SP1/006,Special,tuning
+card3.jpg,The Boss,OGN,310/298,Overnumbered,tuning
+card4.jpg,Blind Monk,OGN,304/298,Overnumbered,tuning
+card5.jpg,Daughter of the Void,OGN,299/298,Overnumbered,tuning
+card6.jpg,"Fizz, Trickster",SFD,140/221,Rare,tuning
+card7.jpg,"Azir, Ascendant",SFD,050/221,Rare,tuning
+card8.jpg,"Rengar, Pouncing",SFD,025/221,Rare,tuning
+card9.jpg,"Ezreal, Dashing",SFD,082/221,Rare,tuning
+card10.jpg,"Yone, Blademaster",SFD,116/221,Rare,tuning
+card11.jpg,"Rek'Sai, Swarm Queen",SFD,170/221,Rare,heldout
+card12.jpg,"Soraka, Wanderer",SFD,173/221,Rare,heldout
+card13.jpg,"Bard, Mercurial",SFD,079/221,Rare,heldout
+card14.jpg,"Fiora, Peerless",SFD,110/221,Rare,heldout
+card15.jpg,"Aphelios, Exalted",SFD,049/221,Rare,heldout
+card16.jpg,"Lucian, Merciless",SFD,113/221,Rare,heldout
+card17.jpg,"Janna, Savior",SFD,053/221,Rare,heldout
+card18.jpg,"Ornn, Forge God",SFD,085/221,Rare,heldout
+card19.jpg,"Rumble, Hotheaded",SFD,026/221,Rare,heldout
+card20.jpg,"Rell, Magnetic",SFD,024/221,Rare,heldout
+card21.jpg,"Seraphine, Not Alone",RAD,138a/167,Alternate Art,hard
+card22.jpg,"Seal of Discord",OGN,204/298,Epic,hard
+card23.jpg,"Soraka, Wanderer",SFD,239*/221,Signature,hard
+card24.jpg,"Stacked Deck",OGN,183/298,Uncommon,hard
+card25.jpg,"Teemo, Scout",OGN,197b/298,Alternate Art,hard
+card26.jpg,"Kennen, Heart of the Tempest",VEN,155a/166,Alternate Art,hard
+card27.jpg,"Teemo, Scout",OGN,197/298,Promo,hard
+card28.jpg,"Teemo, Strategist",OGN,121/298,Epic,hard
+card29.jpg,"Flash",OGS,011/024,Promo,hard
+card30.jpg,"Yasuo, Remorseful",OGN,076b/298,Promo,hard
