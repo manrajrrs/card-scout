@@ -4,22 +4,31 @@ An AI agent that identifies Riftbound trading cards from a photo, built to suppo
 
 ## Results
 
-Eval: 10 photos of my own Riftbound cards, scored by exact match against hand-written labels (`labels.csv`).
+## Eval
 
-| Run | Change | Full match | Name | Set code | Number | Rarity |
-|-----|--------|-----------|------|----------|--------|--------|
-| 1 | Baseline prompt | 3/10 | 4/10 | 10/10 | 10/10 | 7/10 |
-| 2 | Prompt asks for the full card name, including the subtitle | 8/10 | 10/10 | 10/10 | 10/10 | 8/10 |
-| 3 | Prompt adds guidance for identifying rarity | 10/10 | 10/10 | 10/10 | 10/10 | 10/10 |
+30 photos of Riftbound cards (owned + eBay-sourced), scored by exact match per field against hand-written labels (`labels.csv`).
+Labels are written from the physical card before the model runs and never edited to fit results.
 
-Held-out set: 10 additional cards, same prompt as run 3, no tuning afterwards: 10/10 full match. Photos were taken in the same conditions as the tuning set, so a harder set (angles, glare, sleeves) is next.
+| Run | Cards | Prompt change | Full match | Name | Set code | Number | Rarity |
+|-----|-------|---------------|-----------|------|----------|--------|--------|
+| 1 | 1-10 | Baseline | 3/10 | 4/10 | 10/10 | 10/10 | 7/10 |
+| 2 | 1-10 | Ask for full card name including subtitle eg. Kai'Sa, Survivor | 8/10 | 10/10 | 10/10 | 10/10 | 8/10 |
+| 3 | 1-10 | Add rarity granularity eg. Alternate Art, Overnumbered, Signature | 10/10 | 10/10 | 10/10 | 10/10 | 10/10 |
+| 4 | 1-20 (held-out) | None | 20/20 | 20/20 | 20/20 | 20/20 | 20/20 |
+| 5 | 1-30 (all) | None | 20/30 | 26/30 | 30/30 | 24/30 | 21/30 |
+| 6 | 1-30 (all) | Translate Chinese/Korean to English, refine number eg. SFD 230*/221 | 21/30 | 27/30 | 29/30 | 24/30 | 22/30 |
+
+## Known failures
+- Number suffixes (a, b, *) are dropped or misread due to blur, angles, glare from sleeves etc.
+- Chinese cards: the model sometimes returns a name that differs from the printed name (card26: printed "Kennen, Heart of the Tempest", model returned "Heart of Fury").
+- Rarity is low on variants (Alternate Art, Signature, Promo).
 
 ## How it works
 
 Upload a photo to `POST /identify`. The image is base64-encoded and sent to Anthropic's Claude Haiku vision model, which returns the card name, set code, number and rarity as JSON.
 
 ```json
-{"name": "Teemo", "set_code": "SFD", "number": "230/221", "rarity": "Overnumbered"}
+{"name": "Teemo, Strategist", "set_code": "SFD", "number": "230/221", "rarity": "Overnumbered"}
 ```
 
 Stack: Python, FastAPI, Docker.
