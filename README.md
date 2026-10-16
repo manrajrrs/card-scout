@@ -23,6 +23,13 @@ Labels are written from the physical card before the model runs and never edited
 - Chinese cards: the model sometimes returns a name that differs from the printed name (card26: printed "Kennen, Heart of the Tempest", model returned "Heart of Fury").
 - Rarity is low on variants (Alternate Art, Signature, Promo).
 
+## MCP Server
+
+`mcp_server.py` exposes `identify_card_from_photo` as an MCP tool, so Claude Code can identify a card from a file path.
+Register it with: `claude mcp add card-scout -- <path-to-venv>/bin/python <path-to-repo>/mcp_server.py`
+
+![alt text](image.png)
+
 ## How it works
 
 Upload a photo to `POST /identify`. The image is base64-encoded and sent to Anthropic's Claude Haiku vision model, which returns the card name, set code, number and rarity as JSON.
@@ -71,7 +78,4 @@ Reads `labels.csv`, runs each photo in `test_cards/` through the model and print
 
 ## Next
 
-- Held-out test set
 - Price lookup from legitimate APIs
-- GitHub Actions CI
-- MCP server◊
